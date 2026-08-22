@@ -23,6 +23,9 @@ Regions can be cleaned up automatically according to their duration settings.
 - X-turn regions remain for the specified number of caster turns, or until concentration is lost.
 - Indefinite regions remain on the board by default unless otherwise configured.
 
+### Token Moves Within Enhanced
+Will activate script every time a token moves X Feet in a region.
+
 ### Auto Effect and Activity Transfer
 This module allows base Foundry VTT options, including activities and effects, to be carried forward when creating a spell region.
 
