@@ -1,0 +1,16 @@
+{
+    "name": "SpellRegions+",
+    "title": "SpellRegions+",
+    "description": "A module that provides more customization and automation AOE of SpellRegions",
+    "authors": [
+        {
+          "name": "Mateusz Kumkowski"
+        }
+    ],
+    "version": "1",
+    "minimumCoreVersion": "0.8.8",
+    "scripts": [
+        "scripts/RegionCreation/CreateCircleRegion.js"
+    ]
+
+}
