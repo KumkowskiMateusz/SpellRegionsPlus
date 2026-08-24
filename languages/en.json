@@ -1,4 +1,22 @@
 {
-  "TODO-LIST": {
+  "SpellRegions+": {
+    "Settings": {
+      "MaxManualRolls": {
+        "Name": "Maximum manual rolls",
+        "Hint": "Maximum number of affected tokens that use individual manual rolls."
+      },
+      "AutoDestroyInstantaneous": {
+        "Name": "Remove instantaneous regions",
+        "Hint": "Remove regions created by instantaneous spells after their effect is resolved."
+      },
+      "AutoDestroyConcentration": {
+        "Name": "Remove regions on concentration loss",
+        "Hint": "Remove concentration-based regions when the caster loses concentration."
+      },
+      "ShowSpellCastJson": {
+        "Name": "Show spell cast JSON",
+        "Hint": "Print extracted spell cast data as readable JSON in the browser console."
+      }
+    }
   }
 }
