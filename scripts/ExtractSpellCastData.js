@@ -1,10 +1,6 @@
 const spellRegionsPlus = globalThis.SpellRegionsPlus ?? {};
 
-
-
 Hooks.on("dnd5e.postUseActivity", (activity, usageConfig, results) => {
-    if (activity?.item?.type !== "spell") return;
-
     const data = extractSpellCastData(activity, usageConfig, results);
     const json = JSON.stringify(data, null, 2);
 

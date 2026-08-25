@@ -1,31 +1,26 @@
 export class SpellRegionTemplate {
 
 	static init() {
+		// Figure Out which one would work better
 		Hooks.on("dnd5e.preCreateActivityTemplate", (activity, templateData) => {
+			console.log("preCreateActivityTemplate", activity, templateData);
+		});
 
-		if (overrideSpellTemplate(activity, templateData) === false) return false;
+		Hooks.on("dnd5e.CreateActivityTemplate", (activity, templateData) => {
+			console.log("CreateActivityTemplate", activity, templateData);
 		});
 	}
 }
 
 
-function overrideSpellTemplate(activity, templateData) {
-	const overrides = getSpellTemplateOverrides(activity, templateData);
-
-	foundry.utils.mergeObject(templateData, overrides, {
-		inplace: true,
-		recursive: true
-	});
-}
-
-function getSpellTemplateOverrides(activity, templateData) {
-	return {
-		flags: {
-			"spellregions-plus": {
-				activity: activity.uuid,
-				originalShape: templateData.t,
-				originalDistance: templateData.distance
-			}
-		}
-	};
+function populateTemplateData(templateData, activity) {
+	templateData.actor = activity.actor;
+	templateData.item = activity.item;
+	templateData.activity = activity;
+	templateData.usageConfig = activity.usageConfig;
+	templateData.results = activity.results;
+	templateData.targets = [...(game.user.targets ?? [])].map(token => ({
+		uuid: token.document?.uuid ?? token.uuid,
+		token: token.document
+	}));
 }

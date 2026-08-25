@@ -17,8 +17,7 @@
     "minimumCoreVersion": "0.8.8",
     "scripts": [
         "scripts/Settings.js",
-        "scripts/CreateRegion.js",
-        "scripts/ExtractSpellCastData.js"
+        "scripts/SpellRegionTemplate.js"
     ]
 
 }
